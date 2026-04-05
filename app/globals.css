@@ -1,22 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  /* Default dark theme: Background #121212 */
+  --background: #121212;
+  --foreground: #ededed;
+  
+  --card: #18181b;
+  --card-foreground: #ededed;
+  
+  --border: #27272a;
+  
+  /* Primary orange accent for cinematic aesthetic */
+  --primary: #f97316;
+  --primary-foreground: #000000;
+  
+  /* Deeper orange for sub-accents */
+  --accent: #ea580c;
+  --accent-foreground: #ffffff;
 }
 
 body {
